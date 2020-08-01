@@ -6,7 +6,7 @@ public class BotScript : MonoBehaviour
 {
     public static int botAmount;
     public static bool botTurn = false;
-
+    
 
 
     public static void BotPlaceThief()
