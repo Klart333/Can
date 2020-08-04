@@ -29,11 +29,14 @@ public class DieRoll : MonoBehaviour
                         ResourceDividense.Distribution(totalNum);
                         if (totalNum == 7)
                         {
-                            ThiefScript.PlaceThief();
+                            ThiefScript.PlaceThief(); // Summons the lights, the bots need them actually
+
                             if (PlayerScript.activePlayer.isBot)
                             {
                                 BotScript.BotPlaceThief();
                             }
+
+
                         }
                     }
                     else

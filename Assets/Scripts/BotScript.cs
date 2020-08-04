@@ -11,6 +11,7 @@ public class BotScript : MonoBehaviour
 
     public static void BotPlaceThief()
     {
+
         foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
         {
             if (house.player.colour != PlayerScript.activePlayer.colour)

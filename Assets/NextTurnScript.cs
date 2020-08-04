@@ -359,7 +359,6 @@ public class NextTurnScript : MonoBehaviour
                         }
                         else
                         {
-                            print("We are no longer in the endgame");
                             if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                             {
                                 PlayerScript.player1.inTheEndgame = false;
@@ -543,7 +542,7 @@ public class NextTurnScript : MonoBehaviour
                                     }
                                     ObjectOnBoardLists.dynamitesOnBoard.Add(bigDynamite);
                                 }
-                                print("placed " + evaqAgain + " bombs on a road");
+
                                 goto reiterate;
                             }
                             
@@ -660,7 +659,6 @@ public class NextTurnScript : MonoBehaviour
                                     ObjectOnBoardLists.dynamitesOnBoard.Add(bigDynamite);
                                 }
                             }
-                            print("Placed Dynamite On City");
                             goto DoneForToday;
 
                         }
@@ -700,7 +698,6 @@ public class NextTurnScript : MonoBehaviour
                                 }
                                 ObjectOnBoardLists.dynamitesOnBoard.Add(bigDynamite);
                             }
-                            print("Bombed a candle " + evaqAgain + " times");
                         }
                     }
 
@@ -1176,7 +1173,6 @@ public class NextTurnScript : MonoBehaviour
 
             if (buildingsNum >= Mathf.RoundToInt(4 + int.Parse(EnterMapSizeScript.mapSizeString)))
             {
-                print("We are now in the endgame");
                 if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                 {
                     PlayerScript.player1.inTheEndgame = true;

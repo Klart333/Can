@@ -65,6 +65,7 @@ public class Hexagons : MonoBehaviour
         PlacementLists.UpdateAvailableCities();
         PlacementLists.UpdateAvailableThiefs();
         PlacementLists.UpdateAvailableCandles();
+        PlacementLists.UpdateDynamitePlacement();
 
         if (BotScript.botAmount == 4)
         {

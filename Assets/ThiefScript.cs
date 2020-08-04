@@ -9,10 +9,12 @@ public class ThiefScript : MonoBehaviour
 
     private void Start()
     {
+        thiefLights = new List<GameObject>();
         gun = gameObject;
     }
     public static void PlaceThief()
     {
+
         foreach (GameObject placement in PlacementLists.thiefPlacementList)
         {
             thiefLights.Add((GameObject)Instantiate(Resources.Load("Thief/ThiefLight"), placement.transform.position, Quaternion.identity));

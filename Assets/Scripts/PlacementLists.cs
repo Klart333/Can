@@ -13,17 +13,19 @@ public class PlacementLists : MonoBehaviour
 
     private void Start()
     {
-        roadPlacementList = new List<Vector3>(); 
+        /*roadPlacementList = new List<Vector3>(); 
         housePlacementList = new List<Vector2>();
         housePlacementListALL = new List<Vector2>();
         candlePlacementList = new List<Vector2>();
         cityPlacementList = new List<Vector2>();
         thiefPlacementList = new List<GameObject>();
-        dynamitePlacementList = new List<Vector2>();
+        dynamitePlacementList = new List<Vector2>();*/
+        
     }
 
     public static void UpdateAvailableThiefs()
     {
+        thiefPlacementList.Clear();
         foreach (Hexagons.Tile hexagon in Hexagons.hexagons)
         {
             if (!thiefPlacementList.Contains(hexagon.gameObject))
@@ -318,11 +320,7 @@ public class PlacementLists : MonoBehaviour
             }
             if (num >= maxNum)
             {
-                if (PlayerScript.activePlayer.twoFreeHouses < 2)
-                {
-
-                }
-                else
+                if (PlayerScript.activePlayer.twoFreeHouses >= 2)
                 {
                     killList.Add(pos);
                 }

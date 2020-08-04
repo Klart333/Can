@@ -33,10 +33,10 @@ public class PlayerScript : MonoBehaviour
 
     public static Player activePlayer = new Player(); // Basically copy the info from the player whos turn it is to the activePlayer variable and use it everywhere
 
-    void Start()
+    void Awake()
     {
         player1.colour = Color.red;
-        player2.colour = Color.blue;
+        player2.colour = new Color(0.2f, 0.2f, 1f, 1);
         player3.colour = Color.green;
         player4.colour = Color.yellow;
 
@@ -51,7 +51,6 @@ public class PlayerScript : MonoBehaviour
         player4.winningPosition = new List<Vector2>();
 
         activePlayer = player1;
-
 
 
         #region Reset
@@ -86,24 +85,31 @@ public class PlayerScript : MonoBehaviour
         player4.wheatAmount = 0;
         player4.stoneAmount = 0;
 
+        activePlayer.woodAmount = 0;
+        activePlayer.clayAmount = 0;
+        activePlayer.sheepAmount = 0;
+        activePlayer.wheatAmount = 0;
+        activePlayer.stoneAmount = 0;
+
         player1.inTheEndgame = false;
         player2.inTheEndgame = false;
         player3.inTheEndgame = false;
         player4.inTheEndgame = false;
+        activePlayer.inTheEndgame = false;
 
         player1.twoFreeHouses = 0;
         player2.twoFreeHouses = 0;
         player3.twoFreeHouses = 0;
         player4.twoFreeHouses = 0;
+        activePlayer.twoFreeHouses = 0;
 
         player1.twoFreeRoads = 0;
         player2.twoFreeRoads = 0;
         player3.twoFreeRoads = 0;
         player4.twoFreeRoads = 0;
-
+        activePlayer.twoFreeRoads = 0;
 
         #endregion
 
     }
-
 }

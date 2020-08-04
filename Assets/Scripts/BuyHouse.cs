@@ -29,7 +29,7 @@ public class BuyHouse : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (PlayerScript.activePlayer.twoFreeHouses < 2)
         {
-            CostPanelScript.CreateCostPanel(new List<Vector2>() { new Vector2(1, 1), new Vector2(2, 1), new Vector2(3, 1), new Vector2(4, 1) }, "Free!");
+            CostPanelScript.CreateCostPanel(new List<Vector2>() { }, "Free!");
 
         }
         else
