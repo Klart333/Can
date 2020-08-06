@@ -18,11 +18,11 @@ public class CameraScroll : MonoBehaviour
         cam.orthographicSize -= Input.mouseScrollDelta.y;
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             ogMousePos = Input.mousePosition;
         }
-        else if (Input.GetMouseButton(0) && ogMousePos.x != 0)
+        else if (Input.GetMouseButton(1) && ogMousePos.x != 0)
         {
             mouseDelta = Input.mousePosition - ogMousePos;
 
@@ -31,7 +31,7 @@ public class CameraScroll : MonoBehaviour
             ogMousePos = Input.mousePosition;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(1))
         {
             ogMousePos = new Vector3();
         }
