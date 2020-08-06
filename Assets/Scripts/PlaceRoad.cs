@@ -41,23 +41,23 @@ public class PlaceRoad : MonoBehaviour
 
             if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                 bigRoad.player = PlayerScript.player1;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                 bigRoad.player = PlayerScript.player2;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                 bigRoad.player = PlayerScript.player3;
 
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                 bigRoad.player = PlayerScript.player4;
 
             }
@@ -98,23 +98,23 @@ public class PlaceRoad : MonoBehaviour
 
             if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                 bigRoad.player = PlayerScript.player1;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                 bigRoad.player = PlayerScript.player2;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                 bigRoad.player = PlayerScript.player3;
 
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
             {
-                road.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                 bigRoad.player = PlayerScript.player4;
 
             }

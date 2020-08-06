@@ -489,8 +489,8 @@ public class NextTurnScript : MonoBehaviour
 
             #region Build Candles And Roads
             Vector3 candlePos = new Vector3();
-            
-            if (candleNum >= 5)
+            #region Place Roads If Done With Candles
+            if (candleNum >= 5) 
             {
             restart:;
                 for (int i = 5; i < 23; i++) 
@@ -553,6 +553,8 @@ public class NextTurnScript : MonoBehaviour
                 reiterate:;
                 }
             }
+            #endregion
+            #region Place Candles If Not Done With Em
             else
             {
                 for (int i = 0; i < 5; i++)
@@ -569,6 +571,9 @@ public class NextTurnScript : MonoBehaviour
                         }
                     }
 
+                    #region Place Dynamite On Building In The Way
+
+                    // Place Dynamite On House
                     foreach (ObjectOnBoardLists.House item in ObjectOnBoardLists.housesOnBoard)
                     {
                         if (item.gameObject.transform.position == candlePos)
@@ -617,6 +622,7 @@ public class NextTurnScript : MonoBehaviour
 
                         }
                     }
+                    // Place Dynamite On City
                     foreach (ObjectOnBoardLists.City item in ObjectOnBoardLists.citiesOnBoard)
                     {
                         if (item.gameObject.transform.position == candlePos)
@@ -663,7 +669,7 @@ public class NextTurnScript : MonoBehaviour
 
                         }
                     }
-
+                    // Place Dynamite On Candle
                     foreach (ObjectOnBoardLists.Candle item in ObjectOnBoardLists.candlesOnBoard)
                     {
                         if (item.gameObject.transform.position == candlePos)
@@ -700,6 +706,7 @@ public class NextTurnScript : MonoBehaviour
                             }
                         }
                     }
+                    #endregion
 
                     if (nothingThere)
                     {
@@ -710,7 +717,7 @@ public class NextTurnScript : MonoBehaviour
                 reiterate:;
                 }
             }
-            
+            #endregion
 
             #endregion
 
@@ -757,19 +764,19 @@ public class NextTurnScript : MonoBehaviour
 
                     if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                     }
 
 
@@ -798,8 +805,6 @@ public class NextTurnScript : MonoBehaviour
             }
 
             #endregion
-
-
             #region Place Roads 
 
             #region Free Roads
@@ -853,23 +858,23 @@ public class NextTurnScript : MonoBehaviour
 
                     if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                     {
-                        road.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                         bigRoad.player = PlayerScript.player1;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
                     {
-                        road.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                         bigRoad.player = PlayerScript.player2;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
                     {
-                        road.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                         bigRoad.player = PlayerScript.player3;
 
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
                     {
-                        road.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                         bigRoad.player = PlayerScript.player4;
 
                     }
@@ -923,23 +928,23 @@ public class NextTurnScript : MonoBehaviour
 
                 if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                 {
-                    road.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                     bigRoad.player = PlayerScript.player1;
                 }
                 else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
                 {
-                    road.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                     bigRoad.player = PlayerScript.player2;
                 }
                 else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
                 {
-                    road.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                     bigRoad.player = PlayerScript.player3;
 
                 }
                 else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
                 {
-                    road.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                     bigRoad.player = PlayerScript.player4;
 
                 }
@@ -972,19 +977,19 @@ public class NextTurnScript : MonoBehaviour
 
                     if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
                     {
-                        house.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                     }
 
                     PlacementLists.UpdateAvailableRoads();
@@ -1002,9 +1007,6 @@ public class NextTurnScript : MonoBehaviour
 
 
             #endregion
-
-
-
             #region Roll Die
 
             diePanel.GetComponent<DieRoll>().RollDice();
@@ -1012,7 +1014,6 @@ public class NextTurnScript : MonoBehaviour
             diePanel.GetComponent<DieRoll>().RollDice();
 
             #endregion
-
             #region Exchange
 
             PlayerScript playerScript = new PlayerScript();
@@ -1062,7 +1063,7 @@ public class NextTurnScript : MonoBehaviour
             while (PlayerScript.activePlayer.wheatAmount >= 1 && PlayerScript.activePlayer.stoneAmount >= 2 && myHouseList.Count != 0 && EMERGENCYEVAQAAAAAA < 5)
             {
                 EMERGENCYEVAQAAAAAA++;
-                foreach (Vector2 housePos in PlacementLists.housePlacementList)
+                foreach (Vector2 housePos in PlacementLists.cityPlacementList)
                 {
                     foreach (ObjectOnBoardLists.House item in myHouseList)
                     {
@@ -1082,22 +1083,26 @@ public class NextTurnScript : MonoBehaviour
 
                     if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
                     {
-                        city.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
                         bigCity.player = PlayerScript.player1;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
                     {
-                        city.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
                         bigCity.player = PlayerScript.player2;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
                     {
-                        city.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
                         bigCity.player = PlayerScript.player3;
                     }
                     else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
                     {
-                        city.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
                         bigCity.player = PlayerScript.player4;
                     }
                     ObjectOnBoardLists.citiesOnBoard.Add(bigCity);
@@ -1131,8 +1136,8 @@ public class NextTurnScript : MonoBehaviour
                     }
                     foreach (ObjectOnBoardLists.House item in killList)
                     {
+                        item.gameObject.transform.parent = city.transform;
                         ObjectOnBoardLists.housesOnBoard.Remove(item);
-                        Destroy(item.gameObject);
                     }
                     killList.Clear();
 

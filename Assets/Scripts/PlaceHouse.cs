@@ -37,19 +37,19 @@ public class PlaceHouse : MonoBehaviour
 
             if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
             }
 
 
@@ -98,19 +98,19 @@ public class PlaceHouse : MonoBehaviour
 
             if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
             }
             else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
             {
-                house.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
             }
 
             foreach (GameObject item in BuyHouse.houseLights)
