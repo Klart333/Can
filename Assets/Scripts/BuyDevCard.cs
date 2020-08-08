@@ -17,7 +17,7 @@ public class BuyDevCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     }
     public void BuyCard()
     {
-        if (true/*PlayerScript.activePlayer.sheepAmount >= 1 && PlayerScript.activePlayer.wheatAmount >= 1 && PlayerScript.activePlayer.stoneAmount >= 1*/)
+        if (PlayerScript.activePlayer.sheepAmount >= 1 && PlayerScript.activePlayer.wheatAmount >= 1 && PlayerScript.activePlayer.stoneAmount >= 1)
         {
             ResourceScript.GiveSheep(-1);
             ResourceScript.GiveWheat(-1);

@@ -8,7 +8,7 @@ public class PlaceRoad : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (PlayerScript.activePlayer.twoFreeRoads < 2)
+        if (true/*PlayerScript.activePlayer.twoFreeRoads < 2*/)
         {
             PlayerScript.activePlayer.twoFreeRoads++;
 
