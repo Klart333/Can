@@ -59,21 +59,21 @@ public class ObjectOnBoardLists : MonoBehaviour
         House bigHouse = new House();
         bigHouse.gameObject = house;
 
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             bigHouse.player = PlayerScript.player1;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             bigHouse.player = PlayerScript.player2;
 
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             bigHouse.player = PlayerScript.player3;
 
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             bigHouse.player = PlayerScript.player4;
 
@@ -86,19 +86,19 @@ public class ObjectOnBoardLists : MonoBehaviour
             GameObject gTile = tile.gameObject;
             if (gTile.transform.position == new Vector3(house.transform.position.x, house.transform.position.y + gTile.transform.localScale.y/2, 0) || gTile.transform.position == new Vector3(house.transform.position.x, house.transform.position.y - gTile.transform.localScale.y / 2, 0) || gTile.transform.position == new Vector3(house.transform.position.x + gTile.transform.localScale.x/2, house.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x - gTile.transform.localScale.x / 2, house.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x + gTile.transform.localScale.x / 2, house.transform.position.y - 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x - gTile.transform.localScale.x / 2, house.transform.position.y - 0.35f))
             {
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                 {
                     PlayerScript.player1.tileList.Add(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                 {
                     PlayerScript.player2.tileList.Add(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                 {
                     PlayerScript.player3.tileList.Add(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                 {
                     PlayerScript.player4.tileList.Add(tile);
                 }
@@ -126,19 +126,19 @@ public class ObjectOnBoardLists : MonoBehaviour
             GameObject gTile = tile.gameObject;
             if (gTile.transform.position == new Vector3(house.transform.position.x, house.transform.position.y + gTile.transform.localScale.y / 2, 0) || gTile.transform.position == new Vector3(house.transform.position.x, house.transform.position.y - gTile.transform.localScale.y / 2, 0) || gTile.transform.position == new Vector3(house.transform.position.x + gTile.transform.localScale.x / 2, house.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x - gTile.transform.localScale.x / 2, house.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x + gTile.transform.localScale.x / 2, house.transform.position.y - 0.35f) || gTile.transform.position == new Vector3(house.transform.position.x - gTile.transform.localScale.x / 2, house.transform.position.y - 0.35f))
             {
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                 {
                     PlayerScript.player1.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                 {
                     PlayerScript.player2.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                 {
                     PlayerScript.player3.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                 {
                     PlayerScript.player4.tileList.Remove(tile);
                 }
@@ -188,19 +188,19 @@ public class ObjectOnBoardLists : MonoBehaviour
             GameObject gTile = tile.gameObject;
             if (gTile.transform.position == new Vector3(city.transform.position.x, city.transform.position.y + gTile.transform.localScale.y / 2, 0) || gTile.transform.position == new Vector3(city.transform.position.x, city.transform.position.y - gTile.transform.localScale.y / 2, 0) || gTile.transform.position == new Vector3(city.transform.position.x + gTile.transform.localScale.x / 2, city.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(city.transform.position.x - gTile.transform.localScale.x / 2, city.transform.position.y + 0.35f) || gTile.transform.position == new Vector3(city.transform.position.x + gTile.transform.localScale.x / 2, city.transform.position.y - 0.35f) || gTile.transform.position == new Vector3(city.transform.position.x - gTile.transform.localScale.x / 2, city.transform.position.y - 0.35f))
             {
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                 {
                     PlayerScript.player1.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                 {
                     PlayerScript.player2.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                 {
                     PlayerScript.player3.tileList.Remove(tile);
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                 {
                     PlayerScript.player4.tileList.Remove(tile);
                 }

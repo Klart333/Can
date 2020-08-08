@@ -6,7 +6,7 @@ public class PlaceCity : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        if (true/*PlayerScript.activePlayer.wheatAmount >= 2 && PlayerScript.activePlayer.stoneAmount >= 3*/)
+        if (PlayerScript.activePlayer.wheatAmount >= 2 && PlayerScript.activePlayer.stoneAmount >= 3)
         {
             ResourceScript.GiveWheat(-2);
             ResourceScript.GiveStone(-3);
@@ -20,28 +20,28 @@ public class PlaceCity : MonoBehaviour
             ObjectOnBoardLists.City bigCity = new ObjectOnBoardLists.City();
             bigCity.gameObject = city;
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
-                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
+                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                 bigCity.player = PlayerScript.player1;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
-                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
+                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                 bigCity.player = PlayerScript.player2;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
-                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
+                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                 bigCity.player = PlayerScript.player3;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
-                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
+                city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                 bigCity.player = PlayerScript.player4;
             }
             ObjectOnBoardLists.citiesOnBoard.Add(bigCity);

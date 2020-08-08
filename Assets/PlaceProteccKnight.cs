@@ -6,7 +6,6 @@ public class PlaceProteccKnight : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        print("hello, placed");
         CancelBuyScript.cancelPanel.SetActive(false);
         ChillaMedLjusen.showing = false;
 

@@ -6,7 +6,7 @@ public class PlaceDynamite : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        if (true/*PlayerScript.activePlayer.clayAmount >= 4 && PlayerScript.activePlayer.stoneAmount >= 2*/)
+        if (PlayerScript.activePlayer.clayAmount >= 4 && PlayerScript.activePlayer.stoneAmount >= 2)
         {
             ResourceScript.GiveClay(-4);
             ResourceScript.GiveStone(-2);
@@ -20,19 +20,19 @@ public class PlaceDynamite : MonoBehaviour
             ObjectOnBoardLists.Dynamite bigDynamite = new ObjectOnBoardLists.Dynamite();
             bigDynamite.gameObject = dynamite;
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
                 bigDynamite.player = PlayerScript.player1;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
                 bigDynamite.player = PlayerScript.player2;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
                 bigDynamite.player = PlayerScript.player3;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
                 bigDynamite.player = PlayerScript.player4;
             }

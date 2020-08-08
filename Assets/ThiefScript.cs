@@ -20,6 +20,5 @@ public class ThiefScript : MonoBehaviour
             thiefLights.Add((GameObject)Instantiate(Resources.Load("Thief/ThiefLight"), placement.transform.position, Quaternion.identity));
         }
         CostPanelScript.CreateCostPanel(new List<Vector2>(), "Place Gun");
-
     }
 }

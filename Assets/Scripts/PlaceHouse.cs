@@ -10,19 +10,19 @@ public class PlaceHouse : MonoBehaviour
         {
             PlayerScript.activePlayer.twoFreeHouses++;
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
                 PlayerScript.player1.twoFreeHouses++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
                 PlayerScript.player2.twoFreeHouses++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
                 PlayerScript.player3.twoFreeHouses++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
                 PlayerScript.player4.twoFreeHouses++;
             }
@@ -35,21 +35,21 @@ public class PlaceHouse : MonoBehaviour
             GameObject house = (GameObject)Instantiate(Resources.Load("House/Hus"), transform.position, Quaternion.identity);
             ObjectOnBoardLists.AddHouseOnBoard(house);
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
             }
 
 
@@ -96,21 +96,21 @@ public class PlaceHouse : MonoBehaviour
             GameObject house = (GameObject)Instantiate(Resources.Load("House/Hus"), transform.position, Quaternion.identity);
             ObjectOnBoardLists.AddHouseOnBoard(house);
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
             }
 
             foreach (GameObject item in BuyHouse.houseLights)

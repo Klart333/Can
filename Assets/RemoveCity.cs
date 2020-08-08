@@ -6,7 +6,7 @@ public class RemoveCity : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        if (!ChillaMedLjusen.showing && gameObject.GetComponent<SpriteRenderer>().color == PlayerScript.activePlayer.colour)
+        if (!ChillaMedLjusen.showing && gameObject.GetComponent<SpriteRenderer>().color == PlayerScript.activePlayer.color)
         {
             GameObject cross = (GameObject)Instantiate(Resources.Load("Building/RemoveCross"), transform);
             cross.transform.position = new Vector3(cross.transform.position.x, cross.transform.position.y + transform.localScale.y / 1.6f, 0);

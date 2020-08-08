@@ -14,19 +14,19 @@ public class FreeRoadsCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         PlayerScript.activePlayer.twoFreeRoads -= 2;
 
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.twoFreeRoads -= 2;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.twoFreeRoads -= 2;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.twoFreeRoads -= 2;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.twoFreeRoads -= 2;
         }

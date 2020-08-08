@@ -12,19 +12,19 @@ public class PlaceRoad : MonoBehaviour
         {
             PlayerScript.activePlayer.twoFreeRoads++;
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
                 PlayerScript.player1.twoFreeRoads++;
             }
-            else if(PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if(PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
                 PlayerScript.player2.twoFreeRoads++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
                 PlayerScript.player3.twoFreeRoads++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
                 PlayerScript.player4.twoFreeRoads++;
             }
@@ -39,25 +39,25 @@ public class PlaceRoad : MonoBehaviour
             bigRoad.gameObject = road;
 
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                 bigRoad.player = PlayerScript.player1;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                 bigRoad.player = PlayerScript.player2;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                 bigRoad.player = PlayerScript.player3;
 
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                 bigRoad.player = PlayerScript.player4;
 
             }
@@ -96,25 +96,25 @@ public class PlaceRoad : MonoBehaviour
             ObjectOnBoardLists.Road bigRoad = new ObjectOnBoardLists.Road();
             bigRoad.gameObject = road;
 
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                 bigRoad.player = PlayerScript.player1;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                 bigRoad.player = PlayerScript.player2;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                 bigRoad.player = PlayerScript.player3;
 
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                 bigRoad.player = PlayerScript.player4;
 
             }
@@ -136,7 +136,7 @@ public class PlaceRoad : MonoBehaviour
         int num = 0;
         foreach (ObjectOnBoardLists.Candle candle in ObjectOnBoardLists.candlesOnBoard)
         {
-            if (candle.player.colour == PlayerScript.activePlayer.colour)
+            if (candle.player.color == PlayerScript.activePlayer.color)
             {
                 num++;
             }
@@ -148,7 +148,7 @@ public class PlaceRoad : MonoBehaviour
             int winNum = 0;
             foreach (ObjectOnBoardLists.Candle candle in ObjectOnBoardLists.candlesOnBoard)
             {
-                if (candle.player.colour == PlayerScript.activePlayer.colour)
+                if (candle.player.color == PlayerScript.activePlayer.color)
                 {
                     if (candle.gameObject.transform.position.y > highestY)
                     {
@@ -163,7 +163,7 @@ public class PlaceRoad : MonoBehaviour
 
             foreach (ObjectOnBoardLists.Road road in ObjectOnBoardLists.roadsOnBoard)
             {
-                if (road.player.colour == PlayerScript.activePlayer.colour)
+                if (road.player.color == PlayerScript.activePlayer.color)
                 {
                     Vector3 rPos = road.gameObject.transform.position;
                     Vector3 cPos = candlePog.gameObject.transform.position;

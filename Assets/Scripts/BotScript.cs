@@ -1,20 +1,84 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Reflection;
 public class BotScript : MonoBehaviour
 {
     public static int botAmount;
     public static bool botTurn = false;
-    
 
+    public int player1Score = 0;
+    public int player2Score = 0;
+    public int player3Score = 0;
+    public int player4Score = 0;
 
     public static void BotPlaceThief()
     {
+        Color colorToTarget = new Color();
+
+        BotScript botScript = new BotScript();
 
         foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
         {
-            if (house.player.colour != PlayerScript.activePlayer.colour)
+            if (house.player.color != PlayerScript.activePlayer.color)
+            {
+               botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").SetValue(botScript, (int)botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").GetValue(botScript) + 1);
+            }
+        }
+        foreach (ObjectOnBoardLists.City house in ObjectOnBoardLists.citiesOnBoard)
+        {
+            if (house.player.color != PlayerScript.activePlayer.color)
+            {
+               botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").SetValue(botScript, (int)botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").GetValue(botScript) + 2);
+            }
+        }
+        foreach (ObjectOnBoardLists.Candle house in ObjectOnBoardLists.candlesOnBoard)
+        {
+            if (house.player.color != PlayerScript.activePlayer.color)
+            {
+                botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").SetValue(botScript, (int)botScript.GetType().GetTypeInfo().GetField("player" + house.player.identifier + "Score").GetValue(botScript) + 5);
+            }
+        }
+
+        int s1 = (int)botScript.GetType().GetTypeInfo().GetField("player1Score").GetValue(botScript);
+        int s2 = (int)botScript.GetType().GetTypeInfo().GetField("player2Score").GetValue(botScript);
+        int s3 = (int)botScript.GetType().GetTypeInfo().GetField("player3Score").GetValue(botScript);
+        int s4 = (int)botScript.GetType().GetTypeInfo().GetField("player4Score").GetValue(botScript);
+        
+        if (s1 >= s2 && s1 >= s3 && s1 >= s4)
+        {
+            colorToTarget = PlayerScript.player1.color;
+        }
+        else if (s2 >= s1 && s2 >= s3 && s2 >= s4)
+        {
+            colorToTarget = PlayerScript.player2.color;
+        }
+        else if (s3 >= s2 && s3 >= s1 && s3 >= s4)
+        {
+            colorToTarget = PlayerScript.player3.color;
+        }
+        else if (s4 >= s2 && s4 >= s3 && s4 >= s1)
+        {
+            colorToTarget = PlayerScript.player4.color;
+        }
+        foreach (ObjectOnBoardLists.City city in ObjectOnBoardLists.citiesOnBoard)
+        {
+            if (city.player.color == colorToTarget)
+            {
+                foreach (GameObject light in ThiefScript.thiefLights)
+                {
+                    if (light.transform.position == new Vector3(city.gameObject.transform.position.x, city.gameObject.transform.position.y + 0.5f, 0) || light.transform.position == new Vector3(city.gameObject.transform.position.x, city.gameObject.transform.position.y - 0.5f, 0))
+                    {
+                        light.GetComponent<PlaceThief>().TheifPlacement();
+                        break;
+                    }
+                }
+            }
+        }
+        // Not a problem cause the foreach for the lights will just be empty, still ugly tho
+        foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
+        {
+            if (house.player.color == colorToTarget)
             {
                 foreach (GameObject light in ThiefScript.thiefLights)
                 {
@@ -146,26 +210,26 @@ public class BotScript : MonoBehaviour
             ObjectOnBoardLists.candlesOnBoard.Add(bigCandle);
 
             PlayerScript.activePlayer.oneFreeCandle++;
-            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
             {
-                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                 PlayerScript.player1.oneFreeCandle++;
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
             {
-                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                 PlayerScript.player2.oneFreeCandle++;
 
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
             {
-                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                 PlayerScript.player3.oneFreeCandle++;
 
             }
-            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
             {
-                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                candle.GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                 PlayerScript.player4.oneFreeCandle++;
             }
 
@@ -174,7 +238,7 @@ public class BotScript : MonoBehaviour
             int candleCount = 0;
             foreach (ObjectOnBoardLists.Candle otherCandle in ObjectOnBoardLists.candlesOnBoard)
             {
-                if (otherCandle.player.colour == PlayerScript.activePlayer.colour)
+                if (otherCandle.player.color == PlayerScript.activePlayer.color)
                 {
                     candleCount++;
                 }
@@ -185,7 +249,7 @@ public class BotScript : MonoBehaviour
                 int winNum = 0;
                 foreach (ObjectOnBoardLists.Candle Anothercandle in ObjectOnBoardLists.candlesOnBoard)
                 {
-                    if (Anothercandle.player.colour == PlayerScript.activePlayer.colour)
+                    if (Anothercandle.player.color == PlayerScript.activePlayer.color)
                     {
                         if (Anothercandle.gameObject.transform.position == new Vector3(PlayerScript.activePlayer.winningPosition[0].x, PlayerScript.activePlayer.winningPosition[0].y, 0))
                         {
@@ -196,7 +260,7 @@ public class BotScript : MonoBehaviour
 
                 foreach (ObjectOnBoardLists.Road road in ObjectOnBoardLists.roadsOnBoard)
                 {
-                    if (road.player.colour == PlayerScript.activePlayer.colour)
+                    if (road.player.color == PlayerScript.activePlayer.color)
                     {
                         Vector3 rPos = road.gameObject.transform.position;
                         Vector3 cPos = candlePog.gameObject.transform.position;
@@ -248,25 +312,25 @@ public class BotScript : MonoBehaviour
         ObjectOnBoardLists.Road bigRoad = new ObjectOnBoardLists.Road();
         bigRoad.gameObject = road;
 
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
-            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
             bigRoad.player = PlayerScript.player1;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
-            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
             bigRoad.player = PlayerScript.player2;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
-            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
             bigRoad.player = PlayerScript.player3;
 
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
-            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+            road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
             bigRoad.player = PlayerScript.player4;
 
         }
@@ -283,7 +347,7 @@ public class BotScript : MonoBehaviour
         int winNum = 0;
         foreach (ObjectOnBoardLists.Candle Anothercandle in ObjectOnBoardLists.candlesOnBoard)
         {
-            if (Anothercandle.player.colour == PlayerScript.activePlayer.colour)
+            if (Anothercandle.player.color == PlayerScript.activePlayer.color)
             {
                 if (Anothercandle.gameObject.transform.position == new Vector3(PlayerScript.activePlayer.winningPosition[0].x, PlayerScript.activePlayer.winningPosition[0].y, 0))
                 {
@@ -294,7 +358,7 @@ public class BotScript : MonoBehaviour
 
         foreach (ObjectOnBoardLists.Road aRoad in ObjectOnBoardLists.roadsOnBoard)
         {
-            if (aRoad.player.colour == PlayerScript.activePlayer.colour)
+            if (aRoad.player.color == PlayerScript.activePlayer.color)
             {
                 Vector3 rPos = aRoad.gameObject.transform.position;
                 Vector3 cPos = candlePog.gameObject.transform.position;

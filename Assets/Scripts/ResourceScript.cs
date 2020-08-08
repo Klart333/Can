@@ -36,19 +36,19 @@ public class ResourceScript : MonoBehaviour
     public static void GiveWood(int amount)
     {
         PlayerScript.activePlayer.woodAmount += amount;
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.woodAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.woodAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.woodAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.woodAmount += amount;
         }
@@ -58,19 +58,19 @@ public class ResourceScript : MonoBehaviour
     public static void GiveClay(int amount)
     {
         PlayerScript.activePlayer.clayAmount += amount;
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.clayAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.clayAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.clayAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.clayAmount += amount;
         }
@@ -80,19 +80,19 @@ public class ResourceScript : MonoBehaviour
     public static void GiveSheep(int amount)
     {
         PlayerScript.activePlayer.sheepAmount += amount;
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.sheepAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.sheepAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.sheepAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.sheepAmount += amount;
         }
@@ -102,19 +102,19 @@ public class ResourceScript : MonoBehaviour
     public static void GiveWheat(int amount)
     {
         PlayerScript.activePlayer.wheatAmount += amount;
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.wheatAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.wheatAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.wheatAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.wheatAmount += amount;
         }
@@ -125,19 +125,19 @@ public class ResourceScript : MonoBehaviour
     {
         PlayerScript.activePlayer.stoneAmount += amount;
 
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.stoneAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.stoneAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.stoneAmount += amount;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.stoneAmount += amount;
         }
@@ -148,24 +148,24 @@ public class ResourceScript : MonoBehaviour
 
     public static void GiveWoodP(int amount, PlayerScript.Player player)
     {
-        if (player.colour == PlayerScript.player1.colour)
+        if (player.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.woodAmount += amount;
         }
-        else if (player.colour == PlayerScript.player2.colour)
+        else if (player.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.woodAmount += amount;
         }
-        else if (player.colour == PlayerScript.player3.colour)
+        else if (player.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.woodAmount += amount;
         }
-        else if (player.colour == PlayerScript.player4.colour)
+        else if (player.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.woodAmount += amount;
         }
 
-        if (PlayerScript.activePlayer.colour == player.colour)
+        if (PlayerScript.activePlayer.color == player.color)
         {
             PlayerScript.activePlayer.woodAmount += amount;
             resourcePanel.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = PlayerScript.activePlayer.woodAmount.ToString();
@@ -174,24 +174,24 @@ public class ResourceScript : MonoBehaviour
     }
     public static void GiveClayP(int amount, PlayerScript.Player player)
     {
-        if (player.colour == PlayerScript.player1.colour)
+        if (player.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.clayAmount += amount;
         }
-        else if (player.colour == PlayerScript.player2.colour)
+        else if (player.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.clayAmount += amount;
         }
-        else if (player.colour == PlayerScript.player3.colour)
+        else if (player.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.clayAmount += amount;
         }
-        else if (player.colour == PlayerScript.player4.colour)
+        else if (player.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.clayAmount += amount;
         }
 
-        if (PlayerScript.activePlayer.colour == player.colour)
+        if (PlayerScript.activePlayer.color == player.color)
         {
             PlayerScript.activePlayer.clayAmount += amount;
             resourcePanel.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = PlayerScript.activePlayer.clayAmount.ToString();
@@ -200,24 +200,24 @@ public class ResourceScript : MonoBehaviour
     public static void GiveSheepP(int amount, PlayerScript.Player player)
     {
 
-        if (player.colour == PlayerScript.player1.colour)
+        if (player.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.sheepAmount += amount;
         }
-        else if (player.colour == PlayerScript.player2.colour)
+        else if (player.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.sheepAmount += amount;
         }
-        else if (player.colour == PlayerScript.player3.colour)
+        else if (player.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.sheepAmount += amount;
         }
-        else if (player.colour == PlayerScript.player4.colour)
+        else if (player.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.sheepAmount += amount;
         }
 
-        if (PlayerScript.activePlayer.colour == player.colour)
+        if (PlayerScript.activePlayer.color == player.color)
         {
             PlayerScript.activePlayer.sheepAmount += amount;
             resourcePanel.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = PlayerScript.activePlayer.sheepAmount.ToString();
@@ -225,24 +225,24 @@ public class ResourceScript : MonoBehaviour
     }
     public static void GiveWheatP(int amount, PlayerScript.Player player)
     {
-        if (player.colour == PlayerScript.player1.colour)
+        if (player.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.wheatAmount += amount;
         }
-        else if (player.colour == PlayerScript.player2.colour)
+        else if (player.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.wheatAmount += amount;
         }
-        else if (player.colour == PlayerScript.player3.colour)
+        else if (player.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.wheatAmount += amount;
         }
-        else if (player.colour == PlayerScript.player4.colour)
+        else if (player.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.wheatAmount += amount;
         }
 
-        if (PlayerScript.activePlayer.colour == player.colour)
+        if (PlayerScript.activePlayer.color == player.color)
         {
             PlayerScript.activePlayer.wheatAmount += amount;
             resourcePanel.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = PlayerScript.activePlayer.wheatAmount.ToString();
@@ -251,24 +251,24 @@ public class ResourceScript : MonoBehaviour
   
     public static void GiveStoneP(int amount, PlayerScript.Player player)
     {
-        if (player.colour == PlayerScript.player1.colour)
+        if (player.color == PlayerScript.player1.color)
         {
             PlayerScript.player1.stoneAmount += amount;
         }
-        else if (player.colour == PlayerScript.player2.colour)
+        else if (player.color == PlayerScript.player2.color)
         {
             PlayerScript.player2.stoneAmount += amount;
         }
-        else if (player.colour == PlayerScript.player3.colour)
+        else if (player.color == PlayerScript.player3.color)
         {
             PlayerScript.player3.stoneAmount += amount;
         }
-        else if (player.colour == PlayerScript.player4.colour)
+        else if (player.color == PlayerScript.player4.color)
         {
             PlayerScript.player4.stoneAmount += amount;
         }
 
-        if (PlayerScript.activePlayer.colour == player.colour)
+        if (PlayerScript.activePlayer.color == player.color)
         {
             PlayerScript.activePlayer.stoneAmount += amount;
             resourcePanel.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = PlayerScript.activePlayer.stoneAmount.ToString();

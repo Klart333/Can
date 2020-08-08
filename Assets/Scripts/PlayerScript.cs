@@ -7,7 +7,8 @@ public class PlayerScript : MonoBehaviour
 
     public struct Player
     {
-        public Color colour { get; set; }
+        public int identifier { get; set; } // Should have used this and not the color, but did not come to mind
+        public Color color { get; set; }
         public int twoFreeHouses { get; set; }
         public int twoFreeRoads { get; set; }
         public int oneFreeCandle { get; set; }
@@ -23,6 +24,7 @@ public class PlayerScript : MonoBehaviour
         public bool isBot { get; set; }
         public bool inTheEndgame { get; set; }
         public List<Vector2> winningPosition { get; set; }
+
     }
 
 
@@ -35,10 +37,10 @@ public class PlayerScript : MonoBehaviour
 
     void Awake()
     {
-        player1.colour = Color.red;
-        player2.colour = new Color(0.2f, 0.2f, 1f, 1);
-        player3.colour = Color.green;
-        player4.colour = Color.yellow;
+        player1.color = Color.red;
+        player2.color = new Color(0.2f, 0.2f, 1f, 1);
+        player3.color = Color.green;
+        player4.color = Color.yellow;
 
         player1.tileList = new List<Hexagons.Tile>();
         player2.tileList = new List<Hexagons.Tile>();
@@ -49,6 +51,11 @@ public class PlayerScript : MonoBehaviour
         player2.winningPosition = new List<Vector2>();
         player3.winningPosition = new List<Vector2>();
         player4.winningPosition = new List<Vector2>();
+
+        player1.identifier = 1;
+        player2.identifier = 2;
+        player3.identifier = 3;
+        player4.identifier = 4;
 
         activePlayer = player1;
 

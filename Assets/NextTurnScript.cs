@@ -22,7 +22,7 @@ public class NextTurnScript : MonoBehaviour
     {
         DieRoll.rolled = false;
 
-        if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+        if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
         {
             PlayerScript.activePlayer = PlayerScript.player2;
 
@@ -31,7 +31,7 @@ public class NextTurnScript : MonoBehaviour
             player3.color = Color.grey;
             player4.color = Color.grey;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
         {
             PlayerScript.activePlayer = PlayerScript.player3;
 
@@ -40,7 +40,7 @@ public class NextTurnScript : MonoBehaviour
             player3.color = Color.white;
             player4.color = Color.grey;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
         {
             PlayerScript.activePlayer = PlayerScript.player4;
 
@@ -49,7 +49,7 @@ public class NextTurnScript : MonoBehaviour
             player3.color = Color.grey;
             player4.color = Color.white;
         }
-        else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+        else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
         {
             PlayerScript.activePlayer = PlayerScript.player1;
 
@@ -78,7 +78,7 @@ public class NextTurnScript : MonoBehaviour
         int num = 0;
         foreach (ObjectOnBoardLists.Dynamite dynamite in ObjectOnBoardLists.dynamitesOnBoard)
         {
-            if (dynamite.player.colour == PlayerScript.activePlayer.colour)
+            if (dynamite.player.color == PlayerScript.activePlayer.color)
             {
                 // Check for Knight
                 foreach (GameObject knight in ObjectOnBoardLists.knightsOnBoard)
@@ -137,7 +137,7 @@ public class NextTurnScript : MonoBehaviour
 
                     }
                 }
-                if (theDynamiteThatCould.player.colour == dynamite.player.colour)
+                if (theDynamiteThatCould.player.color == dynamite.player.color)
                 {
                     if (dynamite.gameObject.transform.position == theDynamiteThatCould.gameObject.transform.position)
                     {
@@ -194,7 +194,7 @@ public class NextTurnScript : MonoBehaviour
             {
                 foreach (ObjectOnBoardLists.Candle item in ObjectOnBoardLists.candlesOnBoard)
                 {
-                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.colour == PlayerScript.activePlayer.colour)
+                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.color == PlayerScript.activePlayer.color)
                     {
                         if (PlayerScript.activePlayer.woodAmount > 30)
                         {
@@ -213,7 +213,7 @@ public class NextTurnScript : MonoBehaviour
                 }
                 foreach (ObjectOnBoardLists.House item in ObjectOnBoardLists.housesOnBoard)
                 {
-                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.colour == PlayerScript.activePlayer.colour)
+                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.color == PlayerScript.activePlayer.color)
                     {
                         if (PlayerScript.activePlayer.woodAmount > 30)
                         {
@@ -231,7 +231,7 @@ public class NextTurnScript : MonoBehaviour
                 }
                 foreach (ObjectOnBoardLists.City item in ObjectOnBoardLists.citiesOnBoard)
                 {
-                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.colour == PlayerScript.activePlayer.colour)
+                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.color == PlayerScript.activePlayer.color)
                     {
                         if (PlayerScript.activePlayer.woodAmount > 30)
                         {
@@ -249,7 +249,7 @@ public class NextTurnScript : MonoBehaviour
                 }
                 foreach (ObjectOnBoardLists.Road item in ObjectOnBoardLists.roadsOnBoard)
                 {
-                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.colour == PlayerScript.activePlayer.colour)
+                    if (item.gameObject.transform.position == dynamite.gameObject.transform.position && item.player.color == PlayerScript.activePlayer.color)
                     {
                         if (PlayerScript.activePlayer.woodAmount > 30)
                         {
@@ -285,7 +285,7 @@ public class NextTurnScript : MonoBehaviour
             int candleNum = 0;
             foreach (ObjectOnBoardLists.Candle item in ObjectOnBoardLists.candlesOnBoard)
             {
-                if (item.player.colour == PlayerScript.activePlayer.colour)
+                if (item.player.color == PlayerScript.activePlayer.color)
                 {
                     candleNum++;
                 }
@@ -297,7 +297,7 @@ public class NextTurnScript : MonoBehaviour
 
                 foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
                 {
-                    if (house.player.colour == PlayerScript.activePlayer.colour)
+                    if (house.player.color == PlayerScript.activePlayer.color)
                     {
                         int num = 0;
                         foreach (Hexagons.Tile tile in Hexagons.hexagons)
@@ -331,7 +331,7 @@ public class NextTurnScript : MonoBehaviour
 
                 foreach (ObjectOnBoardLists.City city in ObjectOnBoardLists.citiesOnBoard)
                 {
-                    if (city.player.colour == PlayerScript.activePlayer.colour)
+                    if (city.player.color == PlayerScript.activePlayer.color)
                     {
                         int num2 = 0;
                         foreach (Hexagons.Tile tile in Hexagons.hexagons)
@@ -359,19 +359,19 @@ public class NextTurnScript : MonoBehaviour
                         }
                         else
                         {
-                            if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                            if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                             {
                                 PlayerScript.player1.inTheEndgame = false;
                             }
-                            else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                            else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                             {
                                 PlayerScript.player2.inTheEndgame = false;
                             }
-                            else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                            else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                             {
                                 PlayerScript.player3.inTheEndgame = false;
                             }
-                            else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                            else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                             {
                                 PlayerScript.player4.inTheEndgame = false;
                             }
@@ -385,49 +385,72 @@ public class NextTurnScript : MonoBehaviour
 
             LoopEnd:;
                 #region Add Winning Position
+                if (PlayerScript.activePlayer.winningPosition[0] != null)
+                {
+                    //Candles, First 5
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 0.85f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.4f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.4f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 0.85f));
 
-                //Candles, First 5
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 0.85f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.4f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.4f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 0.85f));
+                    //Roads, The rest
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.25f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.75f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 0.35f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 0.775f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 1.2f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 1.625f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.05f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.75f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.25f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.25f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.75f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.05f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 1.625f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 1.2f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 0.775f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 0.35f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.75f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
+                    PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.25f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
 
-                //Roads, The rest
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.25f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.75f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 0.35f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 0.775f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 1.2f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 1.625f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.05f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.75f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x - 0.25f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.25f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.75f, PlayerScript.activePlayer.winningPosition[0].y - 2.475f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 2.05f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 1.625f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.5f, PlayerScript.activePlayer.winningPosition[0].y - 1.2f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1.25f, PlayerScript.activePlayer.winningPosition[0].y - 0.775f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 1f, PlayerScript.activePlayer.winningPosition[0].y - 0.35f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.75f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
-                PlayerScript.activePlayer.winningPosition.Add(new Vector2(PlayerScript.activePlayer.winningPosition[0].x + 0.25f, PlayerScript.activePlayer.winningPosition[0].y + 0.075f));
-
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
-                {
-                    PlayerScript.player1.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
+                    {
+                        PlayerScript.player1.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
+                    {
+                        PlayerScript.player2.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
+                    {
+                        PlayerScript.player3.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
+                    {
+                        PlayerScript.player4.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    }
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else
                 {
-                    PlayerScript.player2.winningPosition = PlayerScript.activePlayer.winningPosition;
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
+                    {
+                        PlayerScript.player1.inTheEndgame = false;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
+                    {
+                        PlayerScript.player2.inTheEndgame = false;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
+                    {
+                        PlayerScript.player3.inTheEndgame = false;
+                    }
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
+                    {
+                        PlayerScript.player4.inTheEndgame = false;
+                    }
+                    goto DoneForToday;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
-                {
-                    PlayerScript.player3.winningPosition = PlayerScript.activePlayer.winningPosition;
-                }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
-                {
-                    PlayerScript.player4.winningPosition = PlayerScript.activePlayer.winningPosition;
-                }
+                
 
                 #endregion
 
@@ -502,7 +525,7 @@ public class NextTurnScript : MonoBehaviour
                         if (new Vector2(rPlace.x, rPlace.y) == PlayerScript.activePlayer.winningPosition[i])
                         {
                             BotScript.BotPlaceRoad(rPlace);
-                            yield return new WaitForSeconds(0.1f);
+                            yield return new WaitForSeconds(0.2f);
                             goto restart;
                         }
                     }
@@ -511,7 +534,7 @@ public class NextTurnScript : MonoBehaviour
                     {
                         if (road.gameObject.transform.position == new Vector3(PlayerScript.activePlayer.winningPosition[i].x, PlayerScript.activePlayer.winningPosition[i].y, 0)) 
                         {
-                            if (road.player.colour != PlayerScript.activePlayer.colour) // We NUKE!
+                            if (road.player.color != PlayerScript.activePlayer.color) // We NUKE!
                             {
                                 int evaqAgain = 0;
                                 while (PlayerScript.activePlayer.clayAmount >= 2 && PlayerScript.activePlayer.stoneAmount >= 1 && evaqAgain < 50)
@@ -524,19 +547,19 @@ public class NextTurnScript : MonoBehaviour
                                     ObjectOnBoardLists.Dynamite bigDynamite = new ObjectOnBoardLists.Dynamite();
                                     bigDynamite.gameObject = dynamite;
 
-                                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                                     {
                                         bigDynamite.player = PlayerScript.player1;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                                     {
                                         bigDynamite.player = PlayerScript.player2;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                                     {
                                         bigDynamite.player = PlayerScript.player3;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                                     {
                                         bigDynamite.player = PlayerScript.player4;
                                     }
@@ -578,7 +601,7 @@ public class NextTurnScript : MonoBehaviour
                     {
                         if (item.gameObject.transform.position == candlePos)
                         {
-                            if (item.player.colour == PlayerScript.activePlayer.colour)
+                            if (item.player.color == PlayerScript.activePlayer.color)
                             {
                                 ObjectOnBoardLists.RemoveHouseFromBoard(item.gameObject);
                                 BotScript.BotPlaceCandle(candlePos);
@@ -597,19 +620,19 @@ public class NextTurnScript : MonoBehaviour
                                     ObjectOnBoardLists.Dynamite bigDynamite = new ObjectOnBoardLists.Dynamite();
                                     bigDynamite.gameObject = dynamite;
 
-                                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                                     {
                                         bigDynamite.player = PlayerScript.player1;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                                     {
                                         bigDynamite.player = PlayerScript.player2;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                                     {
                                         bigDynamite.player = PlayerScript.player3;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                                     {
                                         bigDynamite.player = PlayerScript.player4;
                                     }
@@ -627,7 +650,7 @@ public class NextTurnScript : MonoBehaviour
                     {
                         if (item.gameObject.transform.position == candlePos)
                         {
-                            if (item.player.colour == PlayerScript.activePlayer.colour)
+                            if (item.player.color == PlayerScript.activePlayer.color)
                             {
                                 ObjectOnBoardLists.RemoveCityFromBoard(item.gameObject);
                                 BotScript.BotPlaceCandle(candlePos);
@@ -646,19 +669,19 @@ public class NextTurnScript : MonoBehaviour
                                     ObjectOnBoardLists.Dynamite bigDynamite = new ObjectOnBoardLists.Dynamite();
                                     bigDynamite.gameObject = dynamite;
 
-                                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                                     {
                                         bigDynamite.player = PlayerScript.player1;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                                     {
                                         bigDynamite.player = PlayerScript.player2;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                                     {
                                         bigDynamite.player = PlayerScript.player3;
                                     }
-                                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                                     {
                                         bigDynamite.player = PlayerScript.player4;
                                     }
@@ -686,19 +709,19 @@ public class NextTurnScript : MonoBehaviour
                                 ObjectOnBoardLists.Dynamite bigDynamite = new ObjectOnBoardLists.Dynamite();
                                 bigDynamite.gameObject = dynamite;
 
-                                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                                 {
                                     bigDynamite.player = PlayerScript.player1;
                                 }
-                                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                                 {
                                     bigDynamite.player = PlayerScript.player2;
                                 }
-                                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                                 {
                                     bigDynamite.player = PlayerScript.player3;
                                 }
-                                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                                 {
                                     bigDynamite.player = PlayerScript.player4;
                                 }
@@ -741,19 +764,19 @@ public class NextTurnScript : MonoBehaviour
 
                     PlayerScript.activePlayer.twoFreeHouses++;
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
                         PlayerScript.player1.twoFreeHouses++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
                         PlayerScript.player2.twoFreeHouses++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
                         PlayerScript.player3.twoFreeHouses++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
                         PlayerScript.player4.twoFreeHouses++;
                     }
@@ -762,21 +785,21 @@ public class NextTurnScript : MonoBehaviour
                     GameObject house = (GameObject)Instantiate(Resources.Load("House/Hus"), new Vector3(housePos.x, housePos.y, 0), Quaternion.identity);
                     ObjectOnBoardLists.AddHouseOnBoard(house);
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                     }
 
 
@@ -798,7 +821,7 @@ public class NextTurnScript : MonoBehaviour
                         PlacementLists.UpdateAvailableHouses();
                     }
 
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.2f);
 
                     #endregion
                 }
@@ -821,19 +844,19 @@ public class NextTurnScript : MonoBehaviour
 
                     PlayerScript.activePlayer.twoFreeRoads++;
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
                         PlayerScript.player1.twoFreeRoads++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
                         PlayerScript.player2.twoFreeRoads++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
                         PlayerScript.player3.twoFreeRoads++;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
                         PlayerScript.player4.twoFreeRoads++;
                     }
@@ -856,31 +879,31 @@ public class NextTurnScript : MonoBehaviour
                     bigRoad.gameObject = road;
 
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
-                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                         bigRoad.player = PlayerScript.player1;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
-                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                         bigRoad.player = PlayerScript.player2;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
-                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                         bigRoad.player = PlayerScript.player3;
 
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
-                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                         bigRoad.player = PlayerScript.player4;
 
                     }
                     ObjectOnBoardLists.roadsOnBoard.Add(bigRoad);
 
-                    yield return new WaitForSeconds(0.05f);
+                    yield return new WaitForSeconds(0.2f);
 
                     PlacementLists.UpdateAvailableRoads();
 
@@ -926,25 +949,25 @@ public class NextTurnScript : MonoBehaviour
                 bigRoad.gameObject = road;
 
 
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                 {
-                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                     bigRoad.player = PlayerScript.player1;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                 {
-                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                     bigRoad.player = PlayerScript.player2;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                 {
-                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                     bigRoad.player = PlayerScript.player3;
 
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                 {
-                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                    road.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                     bigRoad.player = PlayerScript.player4;
 
                 }
@@ -954,7 +977,7 @@ public class NextTurnScript : MonoBehaviour
                 PlacementLists.UpdateAvailableRoads();
                 PlacementLists.UpdateAvailableHouses();
 
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.2f);
 
 
             }
@@ -975,21 +998,21 @@ public class NextTurnScript : MonoBehaviour
                     GameObject house = (GameObject)Instantiate(Resources.Load("House/Hus"), housePos, Quaternion.identity);
                     ObjectOnBoardLists.AddHouseOnBoard(house);
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
-                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        house.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                     }
 
                     PlacementLists.UpdateAvailableRoads();
@@ -997,7 +1020,7 @@ public class NextTurnScript : MonoBehaviour
                     PlacementLists.UpdateAvailableHouses();
                     PlacementLists.UpdateAvailableCandles();
 
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.2f);
 
                     break;
 
@@ -1054,7 +1077,7 @@ public class NextTurnScript : MonoBehaviour
             List<ObjectOnBoardLists.House> myHouseList = new List<ObjectOnBoardLists.House>();
             foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
             {
-                if (house.player.colour == PlayerScript.activePlayer.colour)
+                if (house.player.color == PlayerScript.activePlayer.color)
                 {
                     myHouseList.Add(house);
                 }
@@ -1081,28 +1104,28 @@ public class NextTurnScript : MonoBehaviour
                     ObjectOnBoardLists.City bigCity = new ObjectOnBoardLists.City();
                     bigCity.gameObject = city;
 
-                    if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                    if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                     {
-                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
-                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player1.color;
                         bigCity.player = PlayerScript.player1;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                     {
-                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
-                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player2.color;
                         bigCity.player = PlayerScript.player2;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                     {
-                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
-                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player3.color;
                         bigCity.player = PlayerScript.player3;
                     }
-                    else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                    else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                     {
-                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
-                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.colour;
+                        city.transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
+                        city.transform.GetChild(0).transform.GetChild(0).GetComponent<SpriteRenderer>().color = PlayerScript.player4.color;
                         bigCity.player = PlayerScript.player4;
                     }
                     ObjectOnBoardLists.citiesOnBoard.Add(bigCity);
@@ -1144,15 +1167,10 @@ public class NextTurnScript : MonoBehaviour
                     PlacementLists.UpdateAvailableRoads();
                     PlacementLists.UpdateAvailableCities();
 
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.25f);
 
                     break;
                 }
-            }
-
-            if (EMERGENCYEVAQAAAAAA >= 50)
-            {
-                print("EMERGENCY EVAQ!");
             }
 
 
@@ -1163,14 +1181,14 @@ public class NextTurnScript : MonoBehaviour
 
             foreach (ObjectOnBoardLists.House house in ObjectOnBoardLists.housesOnBoard)
             {
-                if (house.player.colour == PlayerScript.activePlayer.colour)
+                if (house.player.color == PlayerScript.activePlayer.color)
                 {
                     buildingsNum++;
                 }
             }
             foreach (ObjectOnBoardLists.City city in ObjectOnBoardLists.citiesOnBoard)
             {
-                if (city.player.colour == PlayerScript.activePlayer.colour)
+                if (city.player.color == PlayerScript.activePlayer.color)
                 {
                     buildingsNum += 2;
                 }
@@ -1178,19 +1196,19 @@ public class NextTurnScript : MonoBehaviour
 
             if (buildingsNum >= Mathf.RoundToInt(4 + int.Parse(EnterMapSizeScript.mapSizeString)))
             {
-                if (PlayerScript.activePlayer.colour == PlayerScript.player1.colour)
+                if (PlayerScript.activePlayer.color == PlayerScript.player1.color)
                 {
                     PlayerScript.player1.inTheEndgame = true;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player2.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player2.color)
                 {
                     PlayerScript.player2.inTheEndgame = true;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player3.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player3.color)
                 {
                     PlayerScript.player3.inTheEndgame = true;
                 }
-                else if (PlayerScript.activePlayer.colour == PlayerScript.player4.colour)
+                else if (PlayerScript.activePlayer.color == PlayerScript.player4.color)
                 {
                     PlayerScript.player4.inTheEndgame = true;
                 }

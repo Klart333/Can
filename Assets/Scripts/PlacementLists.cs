@@ -104,7 +104,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.House bigHouse in ObjectOnBoardLists.housesOnBoard)
             {
                 GameObject house = bigHouse.gameObject;
-                if ((house.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || house.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || house.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || house.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || house.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || house.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || house.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigHouse.player.colour == PlayerScript.activePlayer.colour)
+                if ((house.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || house.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || house.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || house.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || house.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || house.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || house.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigHouse.player.color == PlayerScript.activePlayer.color)
                 {
                     //woo you passed
                 }
@@ -116,7 +116,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.Candle bigCandle in ObjectOnBoardLists.candlesOnBoard)
             {
                 GameObject candle = bigCandle.gameObject;
-                if ((candle.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigCandle.player.colour == PlayerScript.activePlayer.colour)
+                if ((candle.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || candle.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || candle.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigCandle.player.color == PlayerScript.activePlayer.color)
                 {
                     //woo you passed
                 }
@@ -128,7 +128,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.City bigCity in ObjectOnBoardLists.citiesOnBoard)
             {
                 GameObject city = bigCity.gameObject;
-                if ((city.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || city.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || city.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || city.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || city.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || city.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || city.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigCity.player.colour == PlayerScript.activePlayer.colour)
+                if ((city.transform.position == new Vector3(roadVector.x, roadVector.y + 0.35f, 0) || city.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || city.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.075f, 0) || city.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.075f, 0) || city.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || city.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.075f, 0) || city.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.075f, 0)) && bigCity.player.color == PlayerScript.activePlayer.color)
                 {
                     //woo you passed
                 }
@@ -140,7 +140,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.Road bigRoad in ObjectOnBoardLists.roadsOnBoard)
             {
                 GameObject road = bigRoad.gameObject;
-                if ((road.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.425f, 0) || road.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.425f, 0) || road.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.425f, 0) || road.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.425f, 0) || road.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || road.transform.position == new Vector3(roadVector.x + 0.5f, roadVector.y, 0) || road.transform.position == new Vector3(roadVector.x - 0.5f, roadVector.y, 0)) && bigRoad.player.colour == PlayerScript.activePlayer.colour)
+                if ((road.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y + 0.425f, 0) || road.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y - 0.425f, 0) || road.transform.position == new Vector3(roadVector.x - 0.25f, roadVector.y + 0.425f, 0) || road.transform.position == new Vector3(roadVector.x + 0.25f, roadVector.y - 0.425f, 0) || road.transform.position == new Vector3(roadVector.x, roadVector.y - 0.35f, 0) || road.transform.position == new Vector3(roadVector.x + 0.5f, roadVector.y, 0) || road.transform.position == new Vector3(roadVector.x - 0.5f, roadVector.y, 0)) && bigRoad.player.color == PlayerScript.activePlayer.color)
                 {
                     //woo you passed
                 }
@@ -307,7 +307,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.Road bigRoad in ObjectOnBoardLists.roadsOnBoard)
             {
                 GameObject road = bigRoad.gameObject;
-                if ((pos == new Vector2(road.transform.position.x + 0.25f, road.transform.position.y + 0.075f) || pos == new Vector2(road.transform.position.x - 0.25f, road.transform.position.y + 0.075f) || pos == new Vector2(road.transform.position.x + 0.25f, road.transform.position.y - 0.075f) || pos == new Vector2(road.transform.position.x - 0.25f, road.transform.position.y - 0.075f) || pos == new Vector2(road.transform.position.x, road.transform.position.y + 0.35f) || pos == new Vector2(road.transform.position.x, road.transform.position.y - 0.35f)) && bigRoad.player.colour == PlayerScript.activePlayer.colour)
+                if ((pos == new Vector2(road.transform.position.x + 0.25f, road.transform.position.y + 0.075f) || pos == new Vector2(road.transform.position.x - 0.25f, road.transform.position.y + 0.075f) || pos == new Vector2(road.transform.position.x + 0.25f, road.transform.position.y - 0.075f) || pos == new Vector2(road.transform.position.x - 0.25f, road.transform.position.y - 0.075f) || pos == new Vector2(road.transform.position.x, road.transform.position.y + 0.35f) || pos == new Vector2(road.transform.position.x, road.transform.position.y - 0.35f)) && bigRoad.player.color == PlayerScript.activePlayer.color)
                 {
                     //woo we passed ^^ We want that to be positive, else it will probs get deleted
                 }
@@ -350,7 +350,7 @@ public class PlacementLists : MonoBehaviour
         {
             GameObject house = bigHouse.gameObject;
 
-            if ((!cityPlacementList.Contains(new Vector2(house.transform.position.x, house.transform.position.y))) && bigHouse.player.colour == PlayerScript.activePlayer.colour)
+            if ((!cityPlacementList.Contains(new Vector2(house.transform.position.x, house.transform.position.y))) && bigHouse.player.color == PlayerScript.activePlayer.color)
             {
                 cityPlacementList.Add(new Vector2(house.transform.position.x, house.transform.position.y));
             }
@@ -446,7 +446,7 @@ public class PlacementLists : MonoBehaviour
             foreach (ObjectOnBoardLists.Candle bigCandle in ObjectOnBoardLists.candlesOnBoard)
             {
                 Vector3 candle = bigCandle.gameObject.transform.position;
-                if (/*TOP CANDLE*/ (pos == new Vector2(candle.x - 1.5f, candle.y - 0.85f) || pos == new Vector2(candle.x + 1.5f, candle.y - 0.85f) || pos == new Vector2(candle.x - 1f, candle.y - 2.4f) || pos == new Vector2(candle.x + 1f, candle.y - 2.4f) /*TOP LEFT CANDLE*/ || pos == new Vector2(candle.x + 1.5f, candle.y + 0.85f) || pos == new Vector2(candle.x + 3f, candle.y) || pos == new Vector2(candle.x + 0.5f, candle.y - 1.55f) || pos == new Vector2(candle.x + 2.5f, candle.y - 1.55f) /*TOP RIGHT CANDLE*/ || pos == new Vector2(candle.x - 1.5f, candle.y + 0.85f) || pos == new Vector2(candle.x - 3f, candle.y) || pos == new Vector2(candle.x - 0.5f, candle.y - 1.55f) || pos == new Vector2(candle.x - 2.5f, candle.y - 1.55f) /*BOT LEFT CANDLE*/ || pos == new Vector2(candle.x - 0.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 2.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 2f, candle.y) || pos == new Vector2(candle.x + 1f, candle.y + 2.4f) /*BOT RIGHT CANDLE*/ || pos == new Vector2(candle.x - 2.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 0.5f, candle.y + 1.55f) || pos == new Vector2(candle.x - 2f, candle.y) || pos == new Vector2(candle.x - 1f, candle.y + 2.4f)) && bigCandle.player.colour == PlayerScript.activePlayer.colour)
+                if (/*TOP CANDLE*/ (pos == new Vector2(candle.x - 1.5f, candle.y - 0.85f) || pos == new Vector2(candle.x + 1.5f, candle.y - 0.85f) || pos == new Vector2(candle.x - 1f, candle.y - 2.4f) || pos == new Vector2(candle.x + 1f, candle.y - 2.4f) /*TOP LEFT CANDLE*/ || pos == new Vector2(candle.x + 1.5f, candle.y + 0.85f) || pos == new Vector2(candle.x + 3f, candle.y) || pos == new Vector2(candle.x + 0.5f, candle.y - 1.55f) || pos == new Vector2(candle.x + 2.5f, candle.y - 1.55f) /*TOP RIGHT CANDLE*/ || pos == new Vector2(candle.x - 1.5f, candle.y + 0.85f) || pos == new Vector2(candle.x - 3f, candle.y) || pos == new Vector2(candle.x - 0.5f, candle.y - 1.55f) || pos == new Vector2(candle.x - 2.5f, candle.y - 1.55f) /*BOT LEFT CANDLE*/ || pos == new Vector2(candle.x - 0.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 2.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 2f, candle.y) || pos == new Vector2(candle.x + 1f, candle.y + 2.4f) /*BOT RIGHT CANDLE*/ || pos == new Vector2(candle.x - 2.5f, candle.y + 1.55f) || pos == new Vector2(candle.x + 0.5f, candle.y + 1.55f) || pos == new Vector2(candle.x - 2f, candle.y) || pos == new Vector2(candle.x - 1f, candle.y + 2.4f)) && bigCandle.player.color == PlayerScript.activePlayer.color)
                 {
 
                 }
