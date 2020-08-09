@@ -8,7 +8,7 @@ public class PlaceCandle : MonoBehaviour
     // no :)
     private void OnMouseDown()
     {
-        if (true/*PlayerScript.activePlayer.sheepAmount >= 20*/)
+        if (PlayerScript.activePlayer.sheepAmount >= 20)
         {
             ResourceScript.GiveSheep(-20);
 
